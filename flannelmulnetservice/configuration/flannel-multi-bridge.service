@@ -1,0 +1,16 @@
+[Unit]
+Description=Flanneld multi bridge
+After=network.target
+After=network-online.target
+Wants=network-online.target
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=notify
+EnvironmentFile=/etc/sysconfig/flanneld
+ExecStart=/usr/local/bin/flannelmultibridge -etcd-endpoints=${FLANNEL_ETCD_ENDPOINTS} -etcd-prefix=${FLANNEL_ETCD_PREFIX}
+Restart=on-failure
+
+[Install]
+WantedBy=docker.service

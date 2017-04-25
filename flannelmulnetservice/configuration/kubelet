@@ -1,0 +1,17 @@
+###
+# kubernetes kubelet (minion) config
+
+# The address for the info server to serve on (set to 0.0.0.0 or "" for all interfaces)
+KUBELET_ADDRESS="--address=0.0.0.0"
+
+# The port for the info server to serve on
+# KUBELET_PORT="--port=10250"
+
+# You may leave this blank to use the actual hostname
+KUBELET_HOSTNAME=""
+
+# location of the api-server
+KUBELET_API_SERVER="--api-servers=http://10.0.0.8:8080"
+
+# Add your own!
+KUBELET_ARGS="--config=/etc/kubernetes/manifests --cadvisor-port=4194  --hostname-override=k8-j3mfalwnll-0-gqh4m5evuq73-kube-minion-lxpah7joduup --network-plugin=cni --network-plugin-dir=/etc/cni/net.d"

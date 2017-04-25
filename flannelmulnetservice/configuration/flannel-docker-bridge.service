@@ -1,0 +1,12 @@
+[Unit]
+After=flanneld.service
+Before=docker.service
+Requires=flanneld.service
+
+[Service]
+Type=oneshot
+EnvironmentFile=/run/flannel/networks/master.env
+ExecStart=/usr/local/bin/flannel-docker-bridge
+
+[Install]
+WantedBy=docker.service
