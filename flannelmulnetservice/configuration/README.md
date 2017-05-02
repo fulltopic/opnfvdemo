@@ -15,15 +15,15 @@
     - extract in _/opt/cni/bin/_
 
 - install flannel multinetwork cni plugin
-    - get flannelmulnw from minion1:/home/zf/patches
+    - get flannelmulnw from https://github.com/fulltopic/opnfvdemo/blob/master/flannelmulnetservice/bins/flanneld.tar.gz and extract
     - put it into _/opt/cni/bin_
 
 - install assistant service to create multi-bridge
-    - get flannelmultibridge from minion1:/home/zf/patches/
+    - get flannelmultibridge from https://github.com/fulltopic/opnfvdemo/blob/master/flannelmulnetservice/bins/flannelmultibridge.tar.gz and extract
     - put it into _/usr/local/bin_
 
 - install flanneld for multi-network
-    - get flanneld from minion1:/home/zf/patches/
+    - get flanneld from https://github.com/fulltopic/opnfvdemo/blob/master/flannelmulnetservice/bins/flannelmulnw.tar.gz and extract
     - replace _/usr/bin/flanneld_
 ### Configuration ###
 #### Master ####
