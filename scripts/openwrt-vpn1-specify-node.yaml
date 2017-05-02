@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: openwrtvpn1
-        image: "openwrt/build/test:latest"
+        image: "openwrt/strongswan/config:10"
         imagePullPolicy: "IfNotPresent"
         command: ["/sbin/init"]
         securityContext:
