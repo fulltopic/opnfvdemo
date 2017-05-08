@@ -22,8 +22,9 @@ spec:
         stdin: true
         tty: true
         ports:
-        - containerPort: 80
+        - containerPort: 80 
         - containerPort: 4500
+        - containerPort: 500
       nodeSelector:
         kubernetes.io/hostname: k8-olpiogq2f6-1-tff4z6maa3yj-kube-minion-cuzchdwzkbj2
 ---
@@ -54,4 +55,4 @@ spec:  # specification of the pod's contents
       "port": 80,
       "targetPort": 80
     },
-  ]  
+  ]
