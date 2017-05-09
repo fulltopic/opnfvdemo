@@ -1,17 +1,17 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
- name: openwrtvpnrctest
+ name: openwrtvpn1
 spec:
   replicas: 1
   template:
     metadata:
-      name: openwrtvpntest
+      name: openwrtvpn1
       labels:
-        app: openwrtvpntest
+        app: openwrtvpn1
     spec:
       containers:
-      - name: openwrtvpntest
+      - name: openwrtvpn1
         image: "openwrt/strongswan/config:10"
         imagePullPolicy: "IfNotPresent"
         command: ["/sbin/init"]
@@ -29,11 +29,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: openwrtvpnsvtest
+  name: openwrtvpn1
 spec:  # specification of the pod's contents
   type: NodePort
   selector:
-    app: openwrtvpntest
+    app: openwrtvpn1
   ports: [
     {
       "name": "floatingu",
