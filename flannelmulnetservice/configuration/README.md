@@ -1,4 +1,4 @@
-# Manuel
+# Manual
 ### Clean
 #### Master
 * remove etcd dir /atomic.io/network/*
